@@ -8,7 +8,9 @@ const exports = module.exports = {};
 ************************/
 
 exports.returnWhatYearYouWereBorn = function(age){
-
+  let date = new Date();
+  let birthYear = date.getFullYear();
+  return birthYear - age;
 };
 
 
@@ -17,11 +19,19 @@ exports.returnWhatYearYouWereBorn = function(age){
   You should sort through the cities data set and return all the cities that begin with the letter c
   this operation must be case insensitive, bonus use <code>.filter</code>
 ************************/
+//working on this exercise
 
 exports.returnOnlyCitiesThatStartWith = function(theLetter){
-
-  return [];
+  var arr = [];
+  for (i = 0; i < cities.length; i++) {
+    if (cities[i].city.slice(0, 1).toLowerCase === theLetter.toLowerCase) {
+      cities[i].push(arr)
+    }
+  }
+  return arr;
 };
+
+
 
 exports.returnOnlyCitiesThatStartWith("c");
 

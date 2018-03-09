@@ -23,11 +23,12 @@ exports.returnWhatYearYouWereBorn = function(age){
 
 exports.returnOnlyCitiesThatStartWith = function(theLetter){
   var arr = [];
-  for (i = 0; i < cities.length; i++) {
-    if (cities[i].city.slice(0, 1).toLowerCase === theLetter.toLowerCase) {
-      cities[i].push(arr)
+  for (let i = 0; i < cities.length; i++) {
+    if (cities[i].city.slice(0, 1).toLowerCase() === theLetter.toLowerCase()) {
+      arr.push(cities[i].city)
     }
   }
+  console.log(arr);
   return arr;
 };
 
